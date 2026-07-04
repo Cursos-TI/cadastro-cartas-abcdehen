@@ -10,7 +10,8 @@ int main() {
   char estado1, estado2;
   char codigo1[10], codigo2[10];
   char nome1[50], nome2[50];
-  int populacao1, populacao2, numero1, numero2;
+  unsigned long int populacao1, populacao2;
+  int numero1, numero2;
   float area1, area2, pib1, pib2, densidade_p1, densidade_p2, pib_per_capita1, pib_per_capita2;
   // Área para entrada de dados
 
@@ -24,7 +25,7 @@ int main() {
   fgets(nome1, 50, stdin);
   nome1[strcspn(nome1, "\n")] = '\0';
   printf("Digite o número de habitantes da cidade:\n");
-  scanf("%d", &populacao1);
+  scanf("%lu", &populacao1);
   printf("Digite a área da cidade em km²:\n");
   scanf("%f", &area1);
   printf("Digite o produto interno bruto(PIB) da cidade em bilhões:\n");
@@ -42,7 +43,7 @@ int main() {
   fgets(nome2, 50, stdin);
   nome2[strcspn(nome2, "\n")] = '\0';
   printf("Digite o número de habitantes da cidade:\n");
-  scanf("%d", &populacao2);
+  scanf("%lu", &populacao2);
   printf("Digite a área da cidade em km²:\n");
   scanf("%f", &area2);
   printf("Digite o produto interno bruto(PIB) da cidade em bilhões:\n");
@@ -71,7 +72,7 @@ int main() {
   printf("Estado: %c \n", estado1);
   printf("Código: %s \n", codigo1);
   printf("Nome da cidade: %s \n", nome1);
-  printf("População: %d \n", populacao1);
+  printf("População: %lu \n", populacao1);
   printf("Área: %.2f Km² \n", area1);
   printf("PIB: %.2f bilhões de reais \n", pib1);
   printf("Número de pontos turísticos: %d \n", numero1);
@@ -84,7 +85,7 @@ int main() {
   printf("Estado: %c \n", estado2);
   printf("Código: %s \n", codigo2);
   printf("Nome da cidade: %s \n", nome2);
-  printf("População: %d \n", populacao2);
+  printf("População: %lu \n", populacao2);
   printf("Área: %.2f Km² \n", area2);
   printf("PIB: %.2f bilhões de reais \n", pib2);
   printf("Número de pontos turísticos: %d \n", numero2);
